@@ -8,7 +8,7 @@ import {
     StyleSheet,
     Alert
 } from 'react-native';
-import logo from '../assets/icon.png';
+import logo from '../../../assets/icon.png';
 
 const MIN_LENGTH = 8;
 const MAX_LENGTH = 12;
