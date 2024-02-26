@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Login from './feature/login-page';
+import Login from './src/login-page';
 
 function App() {
   return (
