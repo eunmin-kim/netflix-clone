@@ -1,6 +1,6 @@
-import {View,Text, Image, Button} from "react-native";
+import {StyleSheet, View, Text, Image, Button} from "react-native";
 import React from 'react';
-import { NavigationContainer } from '@react-navigation';
+import { NavigationContainer } from '@react-navigation/native';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 
 const HomeScreen = () => {
@@ -37,11 +37,16 @@ const MoreScreen = () => {
 
 const Tab = createBottomTabNavigator();
 
+
+
 function MainPage() {
     return (
         <View>
-            <View>
-
+            <View style={styles.headerContainer}>
+                <Image
+                    source={require('../../../assets/images/netflix-logo-full.png')}
+                    style={styles.logo}
+                />
             </View>
             <NavigationContainer>
                 <Tab.Navigator>
@@ -54,5 +59,20 @@ function MainPage() {
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    headerContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        height: 60,
+        paddingHorizontal: 10,
+        backgroundColor: '#000',
+    },
+    logo: {
+        width: 100,
+        height: 30,
+    }
+});
 
 export default MainPage;
